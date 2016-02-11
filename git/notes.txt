@@ -1,0 +1,12 @@
+##think about
+http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
+https://gist.github.com/mwhite/6887990
+
+## Open Git config in editor
+git config --global -e
+
+##git commit alias ex: git ac "Message"
+ac = !git add . && git commit -am
+
+##undo commit
+undo-commit = reset --soft HEAD~1
