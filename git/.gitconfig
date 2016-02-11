@@ -1,0 +1,99 @@
+[user]
+name = I. Chupryna
+email = ichupryna@gmail.com
+
+# color {{{
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+
+[color "branch"]
+  current = red reverse
+  local = blue
+  remote = green
+
+[color "diff"]
+  meta = yellow
+  frag = magenta
+  old = red bold
+  new = green
+  plain = white
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+# }}}
+
+[push]
+  default = simple
+[pull]
+  default = current
+[merge]
+  conflictstyle = diff3
+
+[alias]
+  # basic {{{
+  st = status -s
+  cl = clone
+  ci = commit
+  co = checkout
+  br = branch
+  r = reset
+  cp = cherry-pick
+  gr = grep -Ii
+  # }}}
+
+  # commit {{{
+  ac = !git add . && git commit -am
+  cm = commit -m
+  cma = commit -a -m
+  ca = commit --amend
+  amend = commit --amend
+  caa = commit -a --amend -C HEAD
+  # }}}
+
+  # reset commands {{{
+  undo-commit = reset --soft HEAD~1
+  r1 = reset HEAD^
+  r2 = reset HEAD^^
+  rh = reset --hard
+  rh1 = reset HEAD^ --hard
+  rh2 = reset HEAD^^ --hard
+  # }}}
+
+  # stash {{{
+  sl = stash list
+  sa = stash apply
+  ss = stash save
+  # }}}
+
+  # log commands {{{
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  hist1 = log --graph --abbrev-commit --decorate --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(dim white)- %an%C(reset)\" --all
+  hist2 = log --graph --abbrev-commit --decorate --date=relative --format=format:\"%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)\"
+  ls = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+  lc  = "!f() { git ll "$1"^.."$1"; }; f"
+  lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+  fl = log -u
+  filelog = log -u
+  # }}}
+
+  # last tag created
+  lasttag = describe --tags --abbrev=0
+  lt = describe --tags --abbrev=0
+
+  # conflict/merges
+  ours = "!f() { git co --ours $@ && git add $@; }; f"
+  theirs = "!f() { git co --theirs $@ && git add $@; }; f"
+
+  #list remotes
+  rem="!git config -l | grep remote.*url | tail -n +2"
+
+  # initial empty commit
+  empty = "!git commit -am\"[empty] Initial commit\" --allow-empty"
+
+  # list all aliases
+  la = "!git config -l | grep alias | cut -c 7-"
