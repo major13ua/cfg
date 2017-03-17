@@ -1,15 +1,15 @@
-## Темплейт гит конфигурации, со следующими фичами
-* подсветка цветами, и 3сторонний диф [diff3] при мердже
-* набор коротких сокращений (алиасы)
-* вывод графической истории hist, hist1, hist2
+## .gitconfig template
+* [diff3] with colour option
+* aliases for common comands
+* history options hist, hist1, hist2
 
-## Использование
-* Чекаут проекта user-setup
-* В директории /user-setup/git/ создаем копию .gitconfig_tmpl с именем .gitconfig (файл внесен в гитигнор, и не будет мешать получать изменения)
-* В файле .gitconfig прописываем свое Имя и Почту
-* В домашней директории делаем алиас на файл .gitconfig с именем .gitconfig
+## How to use
+* Clone project to home ~
+* Create copy of ~/cfg/git/.gitconfig_tmpl with name .gitconfig (.gitconfig already added to gitignore) cmd: cp .gitconfig_tmpl .gitconfig
+* Edit .gitconfig with your name and email 
+* Create alias in ~ with name .gitconfig cmd: ln -s ~/cfg/git/.gitconfig ~/.gitconfig
 
-## 2017-02 Обновление
+## 2017-02 Update
 [DZone](https://dzone.com/articles/lesser-known-git-commands?utm_source=Top%205&utm_medium=email&utm_campaign=2017-02-24)
 * Git Please
 * Git Commend
