@@ -2,15 +2,15 @@
 #nohup command >/dev/null 2>&1 &
 
 #EXPORT SECTION
-export PATH=~/npm-global/bin:$PATH
-export PATH=~/App/apache-maven-3.3.3/bin:$PATH
+#export PATH=~/npm-global/bin:$PATH
+export NPM_CONFIG_PREFIX=/opt/npm-global
 
 #ALIAS SECTION
-alias webstorm='nohup /home/ychupryn/App/webstorm-11/bin/webstorm.sh >/dev/null 2>&1 &'
+#alias webstorm='nohup /opt/webstorm/bin/webstorm.sh >/dev/null 2>&1 &'
 
 # Set Proxy
 function setproxy() {
-    export {http,https,ftp}_proxy="http://proxy.astelit.ukr:3128"
+    export {http,https,ftp}_proxy="http://proxy:3128"
 }
 
 # Unset Proxy
