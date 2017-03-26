@@ -2,7 +2,7 @@
 #nohup command >/dev/null 2>&1 &
 
 #EXPORT SECTION
-#export PATH=~/npm-global/bin:$PATH
+export PATH=/opt/npm-global/bin:$PATH
 export NPM_CONFIG_PREFIX=/opt/npm-global
 
 #ALIAS SECTION
