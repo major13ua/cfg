@@ -4,6 +4,7 @@
 #EXPORT SECTION
 export PATH=/opt/npm-global/bin:$PATH
 export NPM_CONFIG_PREFIX=/opt/npm-global
+export LIFERAY_HOME=/opt/liferay
 
 #ALIAS SECTION
 #alias webstorm='nohup /opt/webstorm/bin/webstorm.sh >/dev/null 2>&1 &'
