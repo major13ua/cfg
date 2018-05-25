@@ -3,7 +3,8 @@
 
 #EXPORT SECTION
 export PATH=/opt/npm-global/bin:$PATH
-export NPM_CONFIG_PREFIX=/opt/npm-global
+# not needed iv nvm is used
+# export NPM_CONFIG_PREFIX=/opt/npm-global
 export LIFERAY_HOME=/opt/liferay
 
 #ALIAS SECTION
